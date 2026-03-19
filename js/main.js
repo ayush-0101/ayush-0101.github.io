@@ -1,3 +1,9 @@
+// ===== Dynamic Experience Calculation =====
+const startDate = new Date(2021, 2, 1); // Mar 2021 (month is 0-indexed)
+const msPerYear = 1000 * 60 * 60 * 24 * 365.25;
+const yearsOfExp = ((Date.now() - startDate.getTime()) / msPerYear).toFixed(1);
+document.getElementById('years-of-exp').textContent = yearsOfExp;
+
 // ===== Theme Toggle =====
 const themeToggle = document.querySelector('.theme-toggle');
 
