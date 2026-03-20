@@ -775,9 +775,10 @@ p.lead {
 }
 
 /* ===== Sidebar ===== */
-.right .card {
+.right {
   position: sticky;
   top: 28px;
+  align-self: start;
 }
 
 .profiles {
@@ -840,7 +841,7 @@ p.lead {
 /* ===== Achievements (centre column) ===== */
 .achievements-core {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
   margin-top: 14px;
 }
@@ -918,6 +919,98 @@ p.lead {
   background: #fff;
   padding: 2px;
   border-radius: 4px;
+}
+
+/* ===== Sidebar Widgets ===== */
+.sidebar-widget {
+  margin-top: 16px;
+}
+
+.sidebar-widget h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+/* Stats row */
+.stat-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 10px;
+  border-radius: 10px;
+  background: var(--glass);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.stat-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Languages widget */
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--glass);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.lang-item:hover {
+  border-color: var(--accent);
+}
+
+.lang-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.lang-proficiency {
+  font-size: 12px;
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+:root[data-theme="light"] .lang-proficiency {
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.15);
 }
 
 /* ===== Footer ===== */
